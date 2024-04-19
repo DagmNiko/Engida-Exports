@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block cssLink %}
+<link rel="stylesheet" href="{% static 'styles/css/shop.css' %}">
+{% endblock %}
+
+{% block main %}
+<section class="hero">
+    <h1 class="title">ENGIDA COFFEE SHOP</h1>
+    <div class="main">
+        <div class="top">
+            <input type="search" name="search" id="srch" class="search-bar" placeholder="SEARCH OUR COFFEE">
+            <div class="sort">
+                <p class="name">Sort by</p>
+                <p class="selected">A-Z</p>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="product">
+                <div class="image">
+                    <img src="{% static 'images/second.jpg' %}" alt="" class="product-img">
+                </div>
+                <div class="text">
+                    <p class="product-title">Ethiopian Yirgacheffe Beans</p>
+                    <p class="description">Ethiopian YirgaCheffe coffee beans are renowned for their delicate...
+                    </p>
+                    <div class="cta-container">
+                        <p class="price">$15/lbs</p>
+                        <button class="buy-cta">Buy <i class="bi bi-arrow-up-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="image">
+                    <img src="{% static 'images/second.jpg' %}" alt="" class="product-img">
+                </div>
+                <div class="text">
+                    <p class="product-title">Ethiopian Yirgacheffe Beans</p>
+                    <p class="description">Ethiopian YirgaCheffe coffee beans are renowned for their delicate...
+                    </p>
+                    <div class="cta-container">
+                        <p class="price">$15/lbs</p>
+                        <button class="buy-cta">Buy <i class="bi bi-arrow-up-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="image">
+                    <img src="{% static 'images/second.jpg' %}" alt="" class="product-img">
+                </div>
+                <div class="text">
+                    <p class="product-title">Ethiopian Yirgacheffe Beans</p>
+                    <p class="description">Ethiopian YirgaCheffe coffee beans are renowned for their delicate...
+                    </p>
+                    <div class="cta-container">
+                        <p class="price">$15/lbs</p>
+                        <button class="buy-cta">Buy <i class="bi bi-arrow-up-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="image">
+                    <img src="{% static 'images/second.jpg' %}" alt="" class="product-img">
+                </div>
+                <div class="text">
+                    <p class="product-title">Ethiopian Yirgacheffe Beans</p>
+                    <p class="description">Ethiopian YirgaCheffe coffee beans are renowned for their delicate...
+                    </p>
+                    <div class="cta-container">
+                        <p class="price">$15/lbs</p>
+                        <button class="buy-cta">Buy <i class="bi bi-arrow-up-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'scripts/home.js' %}"></script>
+{% endblock %}
+
+
+
+</body>
+
+</html>

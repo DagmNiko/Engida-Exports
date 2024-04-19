@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block cssLink %}
+<link rel="stylesheet" href="{% static 'styles/css/contact.css' %}">
+{% endblock %}
+
+{% block main %}
+<section class="hero contact">
+    <h1 class="title"><span>ENGIDA</span>
+        <spam>AI</spam>
+    </h1>
+    <div class="container">
+        <div class="left">
+            <p class="disappearing-msg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+                eligendi
+                necessitatibus praesentium ipsa? Quod, optio consequatur! Velit ratione expedita et provident
+                libero, optio officiis eveniet veniam, id hic beatae qui modi voluptas repudiandae delectus
+                eius.
+            </p>
+            <div class="bottom">
+                <div class="example-msgs">
+                    <div class="ex-msg">
+                        <p class="ex-msg-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+                            corporis
+                            consequatur cumque?</p>
+                    </div>
+                    <div class="ex-msg">
+                        <p class="ex-msg-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Doloribus
+                            accusamus eveniet nulla placeat tempore deserunt?</p>
+                    </div>
+                </div>
+                <div class="message-input">
+                    <input type="text" class="msg-input" placeholder="Write Your Question...">
+                    <button><img src="{% static 'images/Navigation.png' %}" alt=""></button>
+                </div>
+            </div>
+        </div>
+        <div class="right imp">
+            <h1 class="contact-text">CONTACT US</h1>
+            <form action="post" class="contact-form">
+                <div class="inputs">
+                    <input type="email" name="gmail" id="gmail-inp" class="gmail-input" placeholder="Gmail">
+                    <div class="container">
+                        <input type="text" name="name" id="name-inp" class="name-input" placeholder="Name">
+                        <input type="text" name="subject" id="subject-inp" class="subject-input" placeholder="Subject">
+                    </div>
+                    <textarea name="message" id="msg-inp" cols="30" rows="5" class="message-input"
+                        placeholder="Message"></textarea>
+                </div>
+                <button type="submit" class="send-cta">SEND NOW <i
+                        class="bi bi-send-fill"></i><!-- Telegram send icon --></button>
+            </form>
+        </div>
+
+    </div>
+
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'js/home.js' %}"></script>
+{% endblock %}
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Test!!!!!</h1>
+
+
+
+    <div id="some">
+        
+    </div>
+    <form id="nform">
+        {% csrf_token %}
+        <input type="text" id="inputField">
+        <button type="button" id="btn">Send</button>
+
+    </form>
+    <script>
+        document.getElementById('btn').addEventListener('click', function () {
+            let inputData = document.getElementById('inputField').value;
+            let container = document.getElementById('some');
+            console.log(inputData)
+            let threadId = '{{ thread }}'
+            let xhr = new XMLHttpRequest();
+            xhr.open('POST', '{% url "processor" %}', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+            xhr.onload = function () {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    let response = JSON.parse(xhr.responseText);
+                    container.innerHTML += response.result;
+                } else {
+                    console.error('Request failed with status ' + xhr.status);
+                }
+            };
+            xhr.onerror = function () {
+                console.error('Request failed');
+            };
+            let formData = 'input_data=' + encodeURIComponent(inputData) +
+                '&threadId=' + encodeURIComponent(threadId) +
+                '&csrfmiddlewaretoken={{ csrf_token }}';
+            xhr.send(formData);
+        });
+    </script>
+</body>
+
+</html>
+
+
+</body>
+
+</html>

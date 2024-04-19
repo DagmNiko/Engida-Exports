@@ -1,0 +1,164 @@
+@use '_utilities' as util;
+
+
+
+
+
+
+section {
+    &.hero {
+        background: url(../../images/first.jpg);
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+        .title {
+            position: relative;
+            color: util.$secondary--green;
+            font-weight: 850;
+            font-size: 5.5vw !important;
+            top: 3vh;
+            line-height: 1.1;
+        }
+
+        .main {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: .5rem;
+            justify-content: center;
+            .top {
+                display: flex;
+                align-items: center;
+                width: 95%;
+
+                .search-bar {
+                    border: none;
+                    border-radius: 25px;
+                    padding: .5rem;
+                    outline: none;
+                    width: 85%;
+                }
+
+                .sort {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    justify-content: center;
+                    background: black;
+                    width: 7rem;
+                    padding: .3rem;
+
+                    .name {
+                        color: white;
+                        font-size: .5em;
+                    }
+
+                    .selected {
+                        color: util.$secondary--green;
+                        font-weight: 850;
+                    }
+                }
+            }
+
+            .bottom {
+                width: 100%;
+                background: transparentize($color: white, $amount: .4);
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                place-items: center;
+                column-gap: 3rem;
+                row-gap: 3rem;
+                padding: 2rem;
+                border-radius: 20px;
+                backdrop-filter: blur(4px);
+
+                .product {
+                    display: flex;
+                    gap: 1.1rem;
+                    align-items: center;
+
+                    .image {
+                        .product-img {
+                            width: 7rem;
+                            height: 7rem;
+                            object-fit: cover;
+                            border-radius: 15px;
+                        }
+                    }
+
+                    .text {
+                        display: flex;
+                        flex-direction: column;
+                        gap: .5rem;
+
+                        .product-title {
+                            position: relative;
+                            color: util.$secondary--brown;
+                            font-weight: 700;
+                            font-size: 2.5vw;
+                        }
+
+                        .description {
+                            position: relative;
+                            color: util.$primary--black;
+                            font-size: smaller;
+                            font-weight: 400;
+                            width: 80%;
+                            line-height: 1.4;
+                        }
+
+                        .cta-container {
+                            display: flex;
+                            gap: 1rem;
+                            align-items: center;
+
+                            .price {
+                                position: relative;
+                                color: util.$secondary--brown;
+                                font-weight: 700;
+                                font-size: 1.2em;
+                            }
+
+                            .buy-cta {
+                                background: util.$secondary--green;
+                                border: none;
+                                height: 3rem;
+                                width: 9rem;
+                                // border-radius: 5px;
+                                font-weight: 900;
+                                cursor: pointer;
+                                transition: all linear .3s;
+
+                                i {
+                                    position: absolute;
+                                    -webkit-text-stroke: 1px;
+                                    right: 4px;
+                                    opacity: 0;
+                                    transition: all linear .2s;
+                                    top: 3px;
+                                }
+
+                                &:hover {
+                                    i {
+                                        opacity: 1;
+                                        right: 1px;
+                                        top: 0px;
+                                    }
+
+                                    scale: 1.1;
+                                    box-shadow: 0 0 1cm util.$secondary--green;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

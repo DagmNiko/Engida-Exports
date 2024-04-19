@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block cssLink %}
+<link rel="stylesheet" href="{% static 'styles/css/Home.css' %}">
+{% endblock %}
+
+{% block main %}
+
+<section class="hero" id="hero">
+    <div class="left">
+        <h1 class="title">
+            EXPORTING HYPER-QUALITY ETHIOPIAN COFFEE
+        </h1>
+        <p class="explanation">Get the finest coffee "Arabica" from the origin place of coffee itself, Ethiopia.
+            We export of precious and delicious products to many countries including USA, Canada, Australia and
+            more.</p>
+        <div class="hero-btns">
+            <button class="shop-cta">Explore Shop <!-- arrow icon --></button>
+            <button class="contact-cta">Contact Us</button>
+
+        </div>
+    </div>
+    <div class="right">
+        <img src="{% static 'images/coffee-house.png' %}" alt="" class="right-image">
+    </div>
+</section>
+<section class="our-start" id="start" style="background: whitesmoke;">
+    <div class="left">
+        <div class="title">
+            <div class="first">
+                <h1>OUR</h1>
+                <img src="{% static 'images/first.jpg' %}" alt="" class="first-image">
+            </div>
+            <div class="second">
+                <img src="{% static 'images/second.jpg' %}" alt="" class="second-image">
+                <h1>START</h1>
+            </div>
+        </div>
+        <p class="explanation">Our journey started with a group of 20 passionate people trying to provide
+            quality coffee so that other countries could experience the richness and tastefulness of Ethiopian
+            culture through our coffee.</p>
+        <div class="hero-btns">
+            <button class="aboutus-cta">More About Us <!-- arrow icon --></button>
+        </div>
+    </div>
+</section>
+<section class="our-team" style="background: whitesmoke;">
+    <div class="left">
+        <h1 class="title">
+            OUR TEAM
+        </h1>
+        <div class="carousel">
+            <button class="left-btn"><i class="bi bi-arrow-left"></i></button>
+            <div class="container">
+                <!-- TEAM PHOTOS -->
+                <img src="" alt="" class="team-img" id="img1">
+                <img src="" alt="" class="team-img" id="img2">
+                <img src="" alt="" class="team-img" id="img3">
+                <img src="" alt="" class="team-img" id="img4">
+            </div>
+            <button class="right-btn"><i class="bi bi-arrow-right"></i></button>
+        </div>
+        <p class="explanation">Our journey started with a group of 20 passionate people trying to provide
+            quality coffee so that other countries could experience the richness and tastefulness of Ethiopian
+            culture through our coffee.</p>
+        <div class="hero-btns">
+            <button class="contact-cta">Contact Us <i class="bi bi-arrow-right"></i></button>
+            <button class="team-cta">Our Team</button>
+        </div>
+    </div>
+</section>
+<section class="our-products" id="products" style="background: whitesmoke;">
+    <div class="left">
+
+        <h1 class="title">
+            OUR PRODUCTS
+        </h1>
+        <div class="products">
+            <div class="product">
+                <div class="image">
+                    <img src="{% static 'images/second.jpg' %}" alt="" class="product-img">
+                </div>
+                <div class="text">
+                    <p class="product-title">Ethiopian Yirgacheffe Beans</p>
+                    <p class="description">Ethiopian YirgaCheffe coffee beans are renowned for their delicate...
+                    </p>
+                    <div class="cta-container">
+                        <p class="price">$15/lbs</p>
+                        <button class="buy-cta">Buy <i class="bi bi-arrow-up-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="image">
+                    <img src="{% static 'images/second.jpg' %}" alt="" class="product-img">
+                </div>
+                <div class="text">
+                    <p class="product-title">Ethiopian Yirgacheffe Beans</p>
+                    <p class="description">Ethiopian YirgaCheffe coffee beans are renowned for their delicate...
+                    </p>
+                    <div class="cta-container">
+                        <p class="price">$15/lbs</p>
+                        <button class="buy-cta">Buy <i class="bi bi-arrow-up-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-btns">
+            <button class="shop-cta">View Our Shop <i class="bi bi-arrow-right"></i></button>
+        </div>
+    </div>
+    <div class="right"></div>
+</section>
+<section class="home contacts">
+    <div class="left">
+        <p class="title">TALK WITH US NOW</p>
+        <form action="post" class="contact-form">
+            <div class="inputs">
+                <input type="email" name="gmail" id="gmail-inp" class="gmail-input" placeholder="Gmail">
+                <div class="container">
+                    <input type="text" name="name" id="name-inp" class="name-input" placeholder="Name">
+                    <input type="text" name="subject" id="subject-inp" class="subject-input" placeholder="Subject">
+                </div>
+                <textarea name="message" id="msg-inp" cols="30" rows="5" class="message-input"
+                    placeholder="Message"></textarea>
+            </div>
+            <button type="submit" class="send-cta">SEND NOW <i
+                    class="bi bi-send-fill"></i><!-- Telegram send icon --></button>
+        </form>
+    </div>
+    <div class="right"></div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'js/home.js' %}"></script>
+{% endblock %}

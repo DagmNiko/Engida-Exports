@@ -1,0 +1,246 @@
+@use '_utilities' as util;
+
+section {
+    width: 100vw;
+    height: 100vh;
+
+    &.hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        position: relative;
+        top: 4rem;
+        padding: 1rem;
+
+        .title {
+            font-size: 3em;
+            font-weight: 300;
+            background-clip: text;
+            color: transparent;
+            background: util.$secondary--brown;
+            background-clip: text;
+
+            span {
+                background: linear-gradient(to right, util.$secondary--green, util.$secondary--brown);
+                font-weight: 700;
+                background-clip: text;
+            }
+
+        }
+
+        .right .contact-text {
+            font-size: 3em;
+
+            color: transparent;
+            background: linear-gradient(to right, util.$secondary--green, util.$secondary--brown);
+            font-weight: 700;
+            background-clip: text;
+        }
+
+        .container {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+
+            &>* {
+                flex: 1;
+            }
+
+            .left {
+                display: flex;
+                padding: .5rem;
+                position: relative;
+                align-items: center;
+                border-radius: 13px;
+                background: rgb(239, 239, 239);
+                justify-content: end;
+                flex-direction: column;
+                min-height: 75dvh;
+
+                .disappearing-msg {
+                    position: absolute;
+                    top: 10%;
+                    text-align: center;
+                    width: 80%;
+                }
+
+                .bottom {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    gap: .5rem;
+
+                    .example-msgs {
+                        display: flex;
+                        gap: 1rem;
+                        font-size: smaller;
+                        align-items: center;
+
+                        .ex-msg {
+                            background-color: rgb(210, 209, 209);
+                            padding: 1rem;
+                            text-align: center;
+                            width: 40%;
+                            font-weight: 600;
+                            border-radius: 15px;
+                            cursor: pointer;
+                            transition: .3s linear all;
+
+                            &:hover {
+                                scale: 1.1;
+                            }
+                        }
+
+                        justify-content: center;
+                    }
+
+                    .message-input {
+                        width: 100%;
+                        position: relative;
+                        height: fit-content;
+                        border-radius: 3px;
+                        background: black;
+
+                        .msg-input {
+                            width: 90%;
+                            height: 2rem;
+                            background-color: transparent;
+                            border: none;
+                            outline: none;
+                            color: white;
+                            padding-left: 1rem;
+
+                            &::placeholder {
+                                font-family: 'Montserrat', sans-serif;
+
+                                color: rgb(228, 228, 228);
+                            }
+
+                        }
+
+                        button {
+                            position: absolute;
+                            right: 1rem;
+                            top: 50%;
+                            background: transparent;
+                            border: none;
+                            outline: none;
+                            cursor: pointer;
+                            translate: 0 -50%;
+
+                            img {
+                                scale: 0.85;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .contact-form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                width: 100%;
+
+                .inputs {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: .7rem;
+
+                    input,
+                    textarea {
+                        font-family: "Montserrat", sans-serif;
+                    }
+
+                    .gmail-input {
+                        width: 100%;
+                        padding: 1rem;
+                        background: util.$secondary--green;
+                        border: none;
+                        outline: none;
+                        font-weight: 700;
+
+                        &::placeholder {
+                            color: black;
+                            font-weight: 750;
+                        }
+                    }
+
+                    .container {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 1rem;
+
+                        &>* {
+                            flex: 1;
+                            padding: 1rem;
+                            background: util.$secondary--green;
+                            border: none;
+                            outline: none;
+                            font-weight: 700;
+
+                            &::placeholder {
+                                color: black;
+                                font-weight: 750;
+                            }
+                        }
+                    }
+
+                    .message-input {
+                        padding: 1rem;
+                        background: util.$secondary--green;
+                        border: none;
+                        outline: none;
+                        font-weight: 700;
+
+                        &::placeholder {
+                            color: black;
+                            font-weight: 750;
+                        }
+                    }
+                }
+
+                .send-cta {
+                    background: black;
+                    color: white;
+                    font-weight: bolder;
+                    border: none;
+                    outline: none;
+                    padding: 1rem;
+                    transition: .2s linear all;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: .5rem;
+
+                    i {
+                        position: relative;
+                        right: 30%;
+                        top: 40%;
+                        opacity: 0;
+                        transition: .2s linear all;
+                    }
+
+                    &:hover {
+                        i {
+                            opacity: 1;
+                            right: 0;
+                            top: 0;
+                        }
+
+                        // box-shadow: 0 0 2cm util.$secondary--green;
+                        color: util.$secondary--green;
+                        scale: 1.1;
+                        border-radius: 25px;
+                    }
+                }
+
+            }
+        }
+    }
+}

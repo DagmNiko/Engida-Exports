@@ -1,0 +1,614 @@
+@use '_utilities' as util;
+
+section {
+    width: 100vw;
+    min-height: 105vh;
+    max-height: 100%;
+    padding-bottom: 2.5rem;
+
+    &.hero {
+        background-color: util.$primary--black;
+        z-index: 0;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .left {
+            position: relative;
+            min-height: 100%;
+            width: 50%;
+            display: flex;
+            left: 4rem;
+            top: 10%;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .title {
+            color: util.$secondary--green;
+            font-weight: 850;
+            font-size: 4.6vw;
+            width: 90%;
+            line-height: 1.1;
+
+        }
+
+        .explanation {
+            color: util.$primary--white;
+            width: 80%;
+            font-weight: 600;
+            font-size: 1.2vw;
+            line-height: 1.4;
+            // font-size: smaller;
+
+        }
+
+        .hero-btns {
+            width: 50%;
+            position: relative;
+            top: 1.5rem;
+            display: flex;
+            font-size: 1.2vw;
+            gap: 1rem;
+            float: left;
+
+            .shop-cta {
+                position: absolute;
+                background: util.$secondary--green;
+                font-size: 1.1vw;
+                border: none;
+                height: 3.6vw;
+                width: 45%;
+                border-radius: 5px;
+                font-weight: 900;
+                cursor: pointer;
+                transition: all linear .3s;
+
+                &:hover {
+                    scale: 1.1;
+                    box-shadow: 0 0 1cm util.$secondary--green;
+                }
+            }
+
+            .contact-cta {
+                position: absolute;
+                color: util.$primary--white;
+                background: transparent;
+                border: none;
+                height: 3rem;
+                width: 45%;
+                right: 0;
+                border-radius: 5px;
+                font-weight: 950;
+                font-size: 1.1vw;
+                height: 3.6vw;
+                cursor: pointer;
+                color: util.$secondary--brown;
+                border: 1px solid util.$secondary--brown;
+                box-shadow: inset 0 0 .4cm util.$secondary--brown;
+                transition: all linear .3s;
+
+                &:hover {
+                    background: util.$secondary--brown;
+                    scale: 1.1;
+                    color: black;
+                    box-shadow: 0 0 1cm util.$secondary--brown;
+                }
+            }
+        }
+
+        .right {
+            img {
+                position: relative;
+                left: 8rem;
+                top: 3rem;
+                scale: 1.6;
+            }
+        }
+    }
+
+    &.our-start {
+        height: 100vh;
+        width: 100%;
+
+        .left {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            justify-content: center;
+            left: 4rem;
+            gap: 1rem;
+
+            .title {
+
+                .first,
+                .second {
+                    display: flex;
+                    align-items: center;
+                    gap: .4rem;
+                }
+
+                .first-image {
+                    width: 10rem;
+                }
+
+                .second-image {
+                    width: 5rem;
+                }
+
+                h1 {
+                    font-size: 4em;
+                    color: util.$secondary--brown;
+                    font-weight: 700;
+                }
+            }
+
+            img {
+                height: 4rem;
+                border-radius: 25px;
+            }
+
+            .explanation {
+                position: relative;
+                color: util.$primary--black;
+                width: 70%;
+                font-weight: 600;
+                line-height: 1.4;
+                // font-size: smaller;
+
+            }
+
+            .aboutus-cta {
+                background: transparent;
+                border: none;
+                height: 3rem;
+                width: 9rem;
+                border-radius: 5px;
+                font-weight: 900;
+                cursor: pointer;
+                color: util.$secondary--brown;
+                border: 1px solid util.$secondary--brown;
+                box-shadow: inset 0 0 .4cm util.$secondary--brown;
+                transition: all linear .3s;
+
+                &:hover {
+                    background: util.$secondary--brown;
+                    scale: 1.1;
+                    color: black;
+                    box-shadow: 0 0 1cm util.$secondary--brown;
+                }
+            }
+        }
+    }
+
+    &.our-team {
+        height: 100vh;
+        width: 100%;
+
+        .left {
+            width: 40%;
+            height: 100%;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            justify-content: center;
+            left: 4rem;
+            gap: 2rem;
+        }
+
+        .title {
+            position: relative;
+            color: util.$secondary--brown;
+            font-weight: 800;
+            font-size: 3em;
+        }
+
+        .carousel {
+            background: #bcbcbc;
+            height: 15rem;
+            position: relative;
+            border-radius: 10px;
+
+            .left-btn {
+                position: absolute;
+                left: 2px;
+                top: 50%;
+                translate: 0 -50%;
+                cursor: pointer;
+                border: none;
+                color: black;
+                padding: .5rem;
+                border-radius: 5px;
+                background: transparentize($color: util.$secondary--brown, $amount: .7);
+                backdrop-filter: blur(4px);
+                transition: .2s all linear;
+
+                i {
+                    -webkit-text-stroke: 1px;
+                }
+
+                &:hover {
+                    background: util.$secondary--brown;
+                    padding: 1rem;
+                }
+            }
+
+            .right-btn {
+                position: absolute;
+                right: 2px;
+                top: 50%;
+                translate: 0 -50%;
+                background: transparentize($color: util.$secondary--brown, $amount: .7);
+                backdrop-filter: blur(4px);
+                border: none;
+                color: black;
+                border-radius: 5px;
+                padding: .5rem;
+                transition: .2s all linear;
+                cursor: pointer;
+
+                i {
+                    -webkit-text-stroke: 1px;
+                }
+
+                &:hover {
+                    background: util.$secondary--brown;
+                    padding: 1rem;
+                }
+            }
+        }
+
+        .explanation {
+            position: relative;
+            color: util.$primary--black;
+            font-weight: 550;
+            line-height: 1.4;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+
+            .contact-cta {
+                background: util.$secondary--green;
+                border: none;
+                height: 3rem;
+                width: fit-content;
+                border-radius: 5px;
+                font-weight: 900;
+                cursor: pointer;
+                transition: all linear .3s;
+                padding: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+
+                i {
+                    position: relative;
+                    opacity: 0;
+                    font-size: 0;
+                    -webkit-text-stroke: 1px;
+                    transition: all linear .2s;
+                }
+
+                &:hover {
+                    i {
+                        opacity: 1;
+                        font-size: 16px;
+                    }
+
+                    scale: 1.1;
+                    box-shadow: 0 0 1cm util.$secondary--green;
+                }
+            }
+
+            .team-cta {
+                color: util.$primary--white;
+                background: transparent;
+                border: none;
+                height: 3rem;
+                width: 9rem;
+                border-radius: 5px;
+                font-weight: 950;
+                cursor: pointer;
+                color: util.$secondary--brown;
+                border: 1px solid util.$secondary--brown;
+                box-shadow: inset 0 0 .4cm util.$secondary--brown;
+                transition: all linear .3s;
+
+                &:hover {
+                    background: util.$secondary--brown;
+                    scale: 1.1;
+                    color: black;
+                    box-shadow: 0 0 1cm util.$secondary--brown;
+                }
+            }
+
+        }
+    }
+
+    &.our-products {
+        height: 100vh;
+        width: 100%;
+
+        .left {
+            width: 40%;
+            height: 100%;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            justify-content: center;
+            left: 4rem;
+            gap: 2rem;
+        }
+
+        .title {
+            position: relative;
+            color: util.$secondary--brown;
+            font-weight: 800;
+            font-size: 2.5em;
+        }
+
+        .products {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            .product {
+                display: flex;
+                gap: 1.1rem;
+                align-items: center;
+
+                .image {
+                    .product-img {
+                        width: 7rem;
+                        height: 7rem;
+                        object-fit: cover;
+                        border-radius: 15px;
+                    }
+                }
+
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: .5rem;
+
+                    .product-title {
+                        position: relative;
+                        color: util.$secondary--brown;
+                        font-weight: 700;
+                        font-size: 1.7em;
+                    }
+
+                    .description {
+                        position: relative;
+                        color: util.$primary--black;
+                        font-size: smaller;
+                        font-weight: 400;
+                        width: 80%;
+                        line-height: 1.4;
+                    }
+
+                    .cta-container {
+                        display: flex;
+                        gap: 1rem;
+                        align-items: center;
+
+                        .price {
+                            position: relative;
+                            color: util.$secondary--brown;
+                            font-weight: 700;
+                            font-size: 1.2em;
+                        }
+
+                        .buy-cta {
+                            background: util.$secondary--green;
+                            border: none;
+                            height: 3rem;
+                            width: 9rem;
+                            // border-radius: 5px;
+                            font-weight: 900;
+                            cursor: pointer;
+                            transition: all linear .3s;
+
+                            i {
+                                position: absolute;
+                                -webkit-text-stroke: 1px;
+                                right: 4px;
+                                opacity: 0;
+                                transition: all linear .2s;
+                                top: 3px;
+                            }
+
+                            &:hover {
+                                i {
+                                    opacity: 1;
+                                    right: 1px;
+                                    top: 0px;
+                                }
+
+                                scale: 1.1;
+                                box-shadow: 0 0 1cm util.$secondary--green;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+        .shop-cta {
+            background: util.$secondary--brown;
+            border: none;
+            height: 3rem;
+            width: fit-content;
+            border-radius: 5px;
+            font-weight: 900;
+            cursor: pointer;
+            color: black;
+            border: 1px solid util.$secondary--brown;
+            display: flex;
+            transition: all linear .3s;
+            align-items: center;
+            justify-content: center;
+            gap: .3rem;
+            padding: 1rem;
+
+            i {
+                position: relative;
+                opacity: 0;
+                font-size: 0;
+                -webkit-text-stroke: 1px;
+                transition: all linear .2s;
+            }
+
+            &:hover {
+                i {
+                    font-size: 16px;
+                    opacity: 1;
+                }
+
+                scale: 1.1;
+
+                box-shadow: 0 0 1cm util.$secondary--brown;
+            }
+        }
+    }
+
+    &.contacts {
+        width: 100vw;
+        height: 100vh;
+
+        .left {
+            width: 40%;
+            height: 100%;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            justify-content: center;
+            left: 4rem;
+            gap: 2rem;
+
+            .title {
+                position: relative;
+                color: transparent;
+                background: linear-gradient(120deg, black, util.$secondary--green);
+                background-clip: text;
+                font-weight: 900;
+                font-size: 4em;
+            }
+
+            .contact-form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                width: 100%;
+                .inputs {
+                    width: 90%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: .7rem;
+
+                    input,
+                    textarea {
+                        font-family: "Montserrat", sans-serif;
+                        width: 100%;
+                    }
+
+                    .gmail-input {
+                        width: 100%;
+                        padding: 1rem;
+                        background: util.$secondary--green;
+                        border: none;
+                        outline: none;
+                        font-weight: 700;
+
+                        &::placeholder {
+                            color: black;
+                            font-weight: 750;
+                        }
+                    }
+
+                    .container {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 1rem;
+                        width: 100%;
+                        &>* {
+                            flex: 1;
+                            padding: 1rem;
+                            background: util.$secondary--green;
+                            border: none;
+                            outline: none;
+                            font-weight: 700;
+
+                            &::placeholder {
+                                color: black;
+                                font-weight: 750;
+                            }
+                        }
+                    }
+
+                    .message-input {
+                        padding: 1rem;
+                        background: util.$secondary--green;
+                        border: none;
+                        outline: none;
+                        font-weight: 700;
+
+                        &::placeholder {
+                            color: black;
+                            font-weight: 750;
+                        }
+                    }
+                }
+
+                .send-cta {
+                    background: black;
+                    color: white;
+                    font-weight: bolder;
+                    border: none;
+                    outline: none;
+                    padding: 1rem;
+                    transition: .2s linear all;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: .5rem;
+
+                    i {
+                        position: relative;
+                        right: 30%;
+                        top: 40%;
+                        opacity: 0;
+                        transition: .2s linear all;
+                    }
+
+                    &:hover {
+                        i {
+                            opacity: 1;
+                            right: 0;
+                            top: 0;
+                        }
+
+                        // box-shadow: 0 0 2cm util.$secondary--green;
+                        color: util.$secondary--green;
+                        scale: 1.1;
+                        border-radius: 25px;
+                    }
+                }
+
+            }
+        }
+        
+    }
+}
